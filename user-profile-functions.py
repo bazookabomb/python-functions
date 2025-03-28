@@ -1,6 +1,4 @@
-def create_user_profile(name, email, **kwargs):
-    if not name or not email:
-        raise ValueError("Both 'name' and 'email' are required.")    
+def create_user_profile(*, name, email, **kwargs):
     
     profile = {
         "name": name,
@@ -15,6 +13,8 @@ def create_user_profile(name, email, **kwargs):
 
 alice = create_user_profile(name="Alice", email="alice@example.com", age=33, city="New York")
 bob = create_user_profile(name="Bob", email="bob@example.com", last_name="Smith", age=22, phone_number=1234567890)
+# test_user = create_user_profile(age=44)
 
 print(alice)
 print(bob)
+# print(test_user)
